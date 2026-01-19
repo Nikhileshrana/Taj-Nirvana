@@ -124,7 +124,7 @@ export default async function ProductPage({ params }: Args) {
             All products
           </Link>
         </Button>
-        <div className="flex flex-col gap-12 rounded-lg border p-8 md:py-12 lg:flex-row lg:gap-8 bg-primary-foreground">
+        <div className="flex flex-col gap-12 rounded-4xl border p-8 md:py-12 lg:flex-row lg:gap-8 bg-accent">
           <div className="h-full w-full basis-full lg:basis-1/2">
             <Suspense
               fallback={

@@ -45,21 +45,21 @@ export function CartModal() {
       </SheetTrigger>
 
       <SheetContent className="flex flex-col">
-        <SheetHeader>
-          <SheetTitle>My Cart</SheetTitle>
+        <SheetHeader className="border-b pb-2">
+          <SheetTitle>My Favorites</SheetTitle>
 
-          <SheetDescription>Manage your cart here, add items to view the total.</SheetDescription>
+          <SheetDescription>Manage your favorites here, add packages to view the total.</SheetDescription>
         </SheetHeader>
 
         {!cart || cart?.items?.length === 0 ? (
           <div className="text-center flex flex-col items-center gap-2">
             <ShoppingCart className="h-16" />
-            <p className="text-center text-2xl font-bold">Your cart is empty.</p>
+            <p className="text-center text-2xl font-bold">Your favorites is empty.</p>
           </div>
         ) : (
-          <div className="grow flex px-4">
+          <div className="grow flex">
             <div className="flex flex-col justify-between w-full">
-              <ul className="grow overflow-auto py-4">
+              <ul className="grow overflow-auto">
                 {cart?.items?.map((item, i) => {
                   const product = item.product
                   const variant = item.variant

@@ -5,6 +5,7 @@ import type { Product, Variant } from '@/payload-types'
 
 import { useCart } from '@payloadcms/plugin-ecommerce/client/react'
 import clsx from 'clsx'
+import { Heart } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import React, { useCallback, useMemo } from 'react'
 import { toast } from 'sonner'
@@ -45,7 +46,7 @@ export function AddToCart({ product }: Props) {
         product: product.id,
         variant: selectedVariant?.id ?? undefined,
       }).then(() => {
-        toast.success('Item added to cart.')
+        toast.success('Item added to Favorites.')
       })
     },
     [addItem, product, selectedVariant],
@@ -97,7 +98,7 @@ export function AddToCart({ product }: Props) {
   return (
     <Button
       aria-label="Add to cart"
-      variant={'outline'}
+      variant="ghost"
       className={clsx({
         'hover:opacity-90': true,
       })}
@@ -105,7 +106,7 @@ export function AddToCart({ product }: Props) {
       onClick={addToCart}
       type="submit"
     >
-      Add To Cart
+      <Heart className='h-5 w-5 fill-red-500 text-red-700' />
     </Button>
   )
 }

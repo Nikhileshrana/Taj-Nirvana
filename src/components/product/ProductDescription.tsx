@@ -72,7 +72,6 @@ export function ProductDescription({ product }: { product: Product }) {
           <Suspense fallback={null}>
             <VariantSelector product={product} />
           </Suspense>
-
           <hr />
         </>
       )}
