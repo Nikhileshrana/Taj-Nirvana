@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import clientPromise, { DB_NAME, COLLECTIONS } from "@/lib/mongodb";
-import { uploadImage } from "@/lib/blob";
 import type { TourFormData } from "@/types/tour";
 
 // GET: Fetch paginated tours with search and filters

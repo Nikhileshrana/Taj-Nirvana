@@ -1,6 +1,6 @@
+"use client";
 import { ItineraryDay } from "@/types/tour";
 import Map from "./Map";
-import { Suspense } from "react";
 
 interface TourMapProps {
     itinerary: ItineraryDay[];
@@ -22,9 +22,7 @@ export function TourMap({ itinerary }: TourMapProps) {
     return (
         <div className="space-y-6">
             <h2 className="text-2xl font-bold tracking-tight">Tour Map</h2>
-            <Suspense fallback={<div>Loading map...</div>}>
-                <Map locations={locations} />
-            </Suspense>
+            <Map locations={locations} />
         </div>
     );
 }
